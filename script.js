@@ -34,4 +34,10 @@ function turnClick(square){
 function turn(squareId, player){
 	origBoard[squareId] = player;
 	document.getElementById(squareId).innerText = player;
+	let gameWon = checkWin(origBoard, player);
+	if(gameWon){
+		gameOver(gameWon)
+	}
 }
+
+function checkWin(board, player){}
